@@ -1,0 +1,1165 @@
+You are a PowerPoint automation agent and enterprise report-template builder.
+
+Your task is to create a blank reusable PowerPoint template for a corporate monthly stewardship / monthly service report.
+
+This is a tightly controlled FORMAT-ONLY template-build task.
+
+Create a polished, conservative, 78-slide PowerPoint template that looks like a corporate monthly operations/service-review report.
+
+Do not redesign the report.
+Do not reinterpret the layout.
+Do not simplify the structure.
+Do not change the slide count.
+Do not change the section order.
+Do not add marketing-style graphics.
+Do not use decorative imagery.
+Do not populate real operational data.
+Do not calculate metrics.
+Do not infer business logic.
+Do not create real commentary.
+
+The output must be a blank template shell with neutral placeholders only.
+
+ABSOLUTE REQUIREMENTS
+
+Create exactly 78 slides.
+
+Slide size:
+- Width: 10 inches
+- Height: 7.5 inches
+- Aspect ratio: 4:3
+
+Theme:
+- Conservative enterprise operations report
+- Clean, sparse, functional
+- Mostly white reporting slides
+- Full cyan/blue section divider slides
+- Compact report tables
+- Simple Excel-like chart placeholders
+- Embedded Excel/CSV placeholders
+- Understated footer branding placeholders
+
+Do not include real:
+- customer names
+- account names
+- device names
+- site names
+- configuration items
+- IP addresses
+- BGP peers
+- ticket numbers
+- problem case numbers
+- circuit IDs
+- URLs
+- alert counts
+- case counts
+- utilization values
+- MOS values
+- availability values
+- operational incidents
+- operational commentary
+
+Use only neutral placeholders.
+
+LAYOUT SYSTEM
+
+Use PowerPoint dimensions based on a 10.0 inch wide x 7.5 inch high slide.
+
+Use this coordinate system:
+- x = horizontal position from left edge, in inches
+- y = vertical position from top edge, in inches
+- w = width in inches
+- h = height in inches
+
+Global margins:
+- Left content margin: 0.40 in
+- Right content margin: 0.40 in
+- Top title area begins around y = 0.25 in
+- Standard content area begins around y = 1.05 in
+- Footer area begins around y = 7.05 in
+
+Standard slide title box:
+- x = 0.60
+- y = 0.25
+- w = 8.80
+- h = 0.55
+- Font: Arial, Aptos, Calibri, or equivalent clean sans-serif
+- Font size: 22 pt
+- Font color: #0574AC
+- Font weight: regular or semibold
+- Alignment: centered unless otherwise specified
+
+Dense slide title box:
+- x = 0.45
+- y = 0.20
+- w = 9.10
+- h = 0.45
+- Font size: 18–20 pt
+- Font color: #0574AC
+- Alignment: left
+
+Section divider title box:
+- x = 0.45
+- y = 2.65
+- w = 9.10
+- h = 0.85
+- Font size: 28–32 pt
+- Font color: white
+- Alignment: left
+
+Footer slide number:
+- x = 0.35
+- y = 7.12
+- w = 0.40
+- h = 0.18
+- Font size: 7 pt
+- Font color: #404040
+
+Logo placeholder:
+- x = 8.70
+- y = 6.85
+- w = 0.95
+- h = 0.38
+- Text: [Logo Placeholder]
+- Font size: 8 pt
+- Font color: #0574AC
+- Alignment: center
+
+Progress dots placeholder:
+- Place five small circles near top-right.
+- Circle diameter: 0.08 in
+- y = 0.20
+- x positions approximately: 8.95, 9.10, 9.25, 9.40, 9.55
+- Fill: dark gray for inactive dots
+- Optional active dot fill: #00A8E0
+- No labels
+
+COLOR SYSTEM
+
+Use these colors consistently:
+- Standard background: #FFFFFF
+- Section divider background: #36C5E6 or similar bright corporate cyan
+- Primary title blue: #0574AC
+- Body text: #000000 or #333333
+- Table header fill: #B7EAF7 or #BFEFFF
+- Table border: #D0D0D0
+- Light row fill: #F7F7F7
+- Dark gray: #404040
+- Placeholder border: #A6A6A6
+- Placeholder fill: #F4F4F4
+
+TYPOGRAPHY RULES
+
+Use Arial, Aptos, Calibri, or another clean sans-serif font.
+
+Cover title:
+- 28–32 pt
+- black
+- regular or semibold
+
+Cover program/account line:
+- 24–28 pt
+- gray
+- bold
+
+Cover month line:
+- 16–18 pt
+- gray
+- bold
+
+Divider title:
+- 28–32 pt
+- white
+
+Standard slide title:
+- 22 pt
+- #0574AC
+
+Body text:
+- 10–11 pt
+
+Dense notes body:
+- 8–9 pt
+
+Table header:
+- 8–9 pt
+- bold
+
+Table body:
+- 8–9 pt
+
+Chart placeholder labels:
+- 10–12 pt
+
+Footer:
+- 6–8 pt
+
+PLACEHOLDER POLICY
+
+Every data field must remain a neutral placeholder.
+
+Allowed placeholders include:
+- [Presentation Date]
+- [Report Month Year]
+- [Reporting Data Month Year]
+- [Reporting Data Month]
+- [Program / Account Name]
+- [Legal / Proprietary Disclaimer Placeholder]
+- [Logo Placeholder]
+- [Metric Placeholder]
+- [Count Placeholder]
+- [Percentage Placeholder]
+- [Duration Placeholder]
+- [Observation Placeholder]
+- [Commentary Placeholder]
+- [Problem Case Placeholder]
+- [Follow-Up Placeholder]
+- [Action Placeholder]
+- [Status Placeholder]
+- [Location Placeholder]
+- [Configuration Item Placeholder]
+- [Circuit Placeholder]
+- [BGP Peer Placeholder]
+- [Proxy Placeholder]
+- [MOS Data Placeholder]
+- [Dashboard Link Placeholder]
+- [Embedded Excel Object Placeholder]
+- [Embedded CSV Object Placeholder]
+- [Dashboard Screenshot Placeholder]
+
+For dummy table rows, use only:
+- Category A
+- Category B
+- Category C
+- Category D
+- Placeholder 1
+- Placeholder 2
+- Count 0
+- Metric 0%
+
+STANDARD SLIDE COMPONENTS
+
+Every standard reporting slide should include:
+- White background
+- Standard blue title
+- Footer slide number
+- Optional progress dots top-right
+- Optional logo placeholder bottom-right
+- Optional embedded Excel object placeholder if the slide represents data exported from Excel
+
+Every section divider slide should include:
+- Full cyan/blue background
+- Large white title
+- Optional progress dots top-right
+- Logo placeholder bottom-right
+
+Do not use real logos unless a logo asset is provided.
+Use a text placeholder instead.
+
+REUSABLE LAYOUT FAMILIES
+
+COVER LAYOUT
+Use only for Slide 1.
+
+Background:
+- white
+
+Objects:
+1. Date text
+   - x = 0.40
+   - y = 0.45
+   - w = 2.00
+   - h = 0.25
+   - Text: [Presentation Date]
+   - Font size: 10 pt
+   - Color: #666666
+   - Bold
+
+2. Main title
+   - x = 0.40
+   - y = 1.25
+   - w = 7.50
+   - h = 0.55
+   - Text: Monthly Service Report
+   - Font size: 30 pt
+   - Color: #000000
+
+3. Program/account name
+   - x = 0.40
+   - y = 3.10
+   - w = 7.50
+   - h = 0.50
+   - Text: [Program / Account Name]
+   - Font size: 26 pt
+   - Color: #666666
+   - Bold
+
+4. Report month/year
+   - x = 0.40
+   - y = 3.72
+   - w = 5.00
+   - h = 0.35
+   - Text: [Report Month Year]
+   - Font size: 17 pt
+   - Color: #666666
+   - Bold
+
+5. Legal disclaimer
+   - x = 0.40
+   - y = 6.90
+   - w = 7.60
+   - h = 0.35
+   - Text: [Legal / Proprietary Disclaimer Placeholder]
+   - Font size: 5.5 pt
+   - Color: #666666
+
+6. Logo placeholder
+   - x = 8.60
+   - y = 6.80
+   - w = 1.00
+   - h = 0.40
+   - Text: [Logo Placeholder]
+
+CONTENTS LAYOUT
+Use only for Slide 2.
+
+Background:
+- white
+
+Title:
+- x = 0.45
+- y = 0.35
+- w = 3.00
+- h = 0.45
+- Text: Contents
+- Font size: 20 pt
+- Color: #0574AC
+- Alignment: left
+
+Body list:
+- x = 0.70
+- y = 1.15
+- w = 5.00
+- h = 2.50
+- Font size: 14 pt
+- Text:
+  1. Case Metrics
+  2. Availability
+  3. Alerts
+  4. BGP
+  5. Utilization
+  6. Feedback
+
+DENSE NOTES LAYOUT
+Use for:
+- Slide 3
+- Slide 77
+
+Background:
+- white
+
+Title:
+- x = 0.45
+- y = 0.25
+- w = 9.00
+- h = 0.45
+- Font size: 18–20 pt
+- Color: #0574AC
+- Alignment: left
+
+Body text box:
+- x = 0.45
+- y = 0.85
+- w = 9.05
+- h = 6.00
+- Font size: 8.5–9 pt
+- Color: #000000
+- Compact line spacing
+
+Use bold lead-in labels and indented placeholder bullets.
+
+SECTION DIVIDER LAYOUT
+Use for:
+- Slide 4
+- Slide 12
+- Slide 15
+- Slide 19
+- Slide 26
+- Slide 39
+- Slide 42
+- Slide 46
+- Slide 49
+- Slide 61
+- Slide 68
+- Slide 72
+- Slide 78
+
+Background:
+- Full slide fill #36C5E6
+
+Title:
+- x = 0.45
+- y = 2.75
+- w = 9.00
+- h = 0.75
+- Font size: 30 pt
+- Color: white
+- Alignment: left
+
+Progress dots:
+- top-right
+
+Logo placeholder:
+- bottom-right
+
+TEXT + TABLE HYBRID LAYOUT
+Use for:
+- Slide 5
+- Slide 6
+- Slide 7
+- Slide 13
+- Slide 16
+- Slide 20
+- Slide 22
+- Slide 73
+
+Background:
+- white
+
+Title:
+- x = 0.60
+- y = 0.25
+- w = 8.80
+- h = 0.55
+- Font size: 22 pt
+- Color: #0574AC
+- Alignment: centered
+
+Left commentary block:
+- x = 0.45
+- y = 1.00
+- w = 4.20
+- h = 5.70
+- Font size: 9–10 pt
+
+Right table block:
+- x = 5.00
+- y = 1.00
+- w = 4.55
+- h = 5.50
+
+If two right tables are needed:
+- Upper table:
+  - x = 5.10
+  - y = 1.05
+  - w = 4.25
+  - h = 1.55
+- Lower table:
+  - x = 5.10
+  - y = 3.20
+  - w = 4.25
+  - h = 2.80
+
+Embedded Excel object:
+- x = 8.25
+- y = 6.55
+- w = 1.00
+- h = 0.45
+- Text: [Embedded Excel Object Placeholder]
+
+CHART LAYOUT
+Use for:
+- Slide 8
+- Slide 14
+
+Background:
+- white
+
+Title:
+- x = 0.60
+- y = 0.25
+- w = 8.80
+- h = 0.55
+- Font size: 22 pt
+- Color: #0574AC
+- Alignment: centered
+
+Chart placeholder:
+- x = 0.55
+- y = 1.20
+- w = 8.90
+- h = 4.85
+- Fill: white
+- Border: #D0D0D0
+- Text centered: [Chart Placeholder]
+
+Embedded Excel placeholder:
+- x = 8.20
+- y = 6.55
+- w = 1.00
+- h = 0.45
+
+PIVOT-STYLE CHART LAYOUT
+Use for:
+- Slide 9
+- Slide 10
+- Slide 11
+- Slide 17
+- Slide 21
+- Slide 23
+
+Background:
+- white
+
+Chart title inside chart:
+- x = 2.30
+- y = 1.05
+- w = 5.80
+- h = 0.35
+- Font size: 13–15 pt
+- Color: #404040
+- Bold
+
+Pivot chart area:
+- x = 0.90
+- y = 1.35
+- w = 7.90
+- h = 4.55
+- Fill: white
+- Border: #D0D0D0
+- Include light horizontal gridlines
+- Include 10 placeholder bars
+
+Top-left pivot field button:
+- x = 0.65
+- y = 0.85
+- w = 1.15
+- h = 0.20
+- Fill: #D9D9D9
+- Text: [Count Placeholder]
+
+Bottom-left pivot field button:
+- x = 0.65
+- y = 6.10
+- w = 0.90
+- h = 0.20
+- Fill: #D9D9D9
+- Text: [Field Placeholder]
+
+Embedded Excel placeholder:
+- x = 8.15
+- y = 6.45
+- w = 1.10
+- h = 0.50
+
+LARGE TABLE LAYOUT
+Use for:
+- Slide 18
+- Slide 74
+- Slide 75
+- Slide 76
+
+Background:
+- white
+
+Title:
+- x = 0.60
+- y = 0.25
+- w = 8.80
+- h = 0.55
+- Font size: 22 pt
+- Color: #0574AC
+- Alignment: centered
+
+Large table:
+- x = 0.35
+- y = 1.00
+- w = 9.30
+- h = 5.45
+- Compact rows
+- Header fill #B7EAF7
+- Thin borders
+
+If commentary is needed:
+- x = 0.45
+- y = 5.90
+- w = 5.00
+- h = 0.90
+- Font size: 9 pt
+
+DASHBOARD/TABLE SCREENSHOT LAYOUT
+Use for:
+- Slide 24
+- Slide 25
+
+Background:
+- white
+
+Title:
+- x = 0.60
+- y = 0.25
+- w = 8.80
+- h = 0.55
+- Font size: 22 pt
+- Color: #0574AC
+- Alignment: centered
+
+Upper dashboard table:
+- x = 0.35
+- y = 1.05
+- w = 6.25
+- h = 2.40
+- Text: [Top 10 InDiscards Table Placeholder]
+
+Lower dashboard table:
+- x = 0.35
+- y = 3.75
+- w = 6.25
+- h = 2.40
+- Text: [Top 10 OutDiscards Table Placeholder]
+
+Dashboard note:
+- x = 6.75
+- y = 5.25
+- w = 2.70
+- h = 0.70
+- Text:
+  Data on LM dashboard widget
+  [Dashboard Link Placeholder]
+
+Logo placeholder:
+- bottom-right
+
+UTILIZATION SITE LAYOUT
+Use for:
+- Slides 27–38
+- Slides 40–41
+- Slides 43–45
+- Slides 47–48
+- Slides 50–60
+- Slides 62–67
+- Slides 69–71
+
+Background:
+- white
+
+Title:
+- x = 0.60
+- y = 0.25
+- w = 8.80
+- h = 0.55
+- Font size: 22 pt
+- Color: #0574AC
+- Alignment: centered
+- Title pattern:
+  Utilization – Links – [Site Placeholder] ([Link Count Placeholder])
+
+Main body:
+- Mostly blank
+
+Centered embedded object placeholder:
+- x = 4.15
+- y = 3.05
+- w = 1.70
+- h = 0.75
+- Text: [Embedded Excel / CSV Object Placeholder]
+- Fill: #F4F4F4
+- Border: #A6A6A6
+- Font size: 8 pt
+- Alignment: center
+
+Footer:
+- slide number lower-left
+- logo placeholder bottom-right
+- progress dots top-right
+
+SLIDE-BY-SLIDE BUILD SPECIFICATION
+
+Create slides exactly in the following order.
+
+Slide 1:
+Use Cover Layout.
+Text:
+- [Presentation Date]
+- Monthly Service Report
+- [Program / Account Name]
+- [Report Month Year]
+- [Legal / Proprietary Disclaimer Placeholder]
+
+Slide 2:
+Use Contents Layout.
+
+Slide 3:
+Use Dense Notes Layout.
+Title:
+Problem Cases and Follow Ups
+Body:
+Problem tickets Opened:
+- [Problem Case Placeholder]
+- [Problem Case Placeholder]
+
+To do / investigate:
+- [Investigation Placeholder]
+- [Follow-Up Placeholder]
+
+Add to bandwidth reports:
+- [Reporting Enhancement Placeholder]
+
+Voice:
+- [Voice Follow-Up Placeholder]
+
+Other:
+- [Action Placeholder]
+- [Status Placeholder]
+
+Slide 4:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Case Metrics - ServiceNow
+
+Slide 5:
+Use Text + Table Hybrid Layout.
+Title:
+Cases Opened By Priority and Account (Top 10)
+Left commentary:
+- Total Cases: [Count Placeholder]
+- P1: [Count Placeholder]
+- P2: [Count Placeholder]
+- P3: [Count Placeholder]
+- P4: [Count Placeholder]
+
+[Account Placeholder 1] ([Count Placeholder])
+  - [Observation Placeholder]
+  - [Commentary Placeholder]
+
+[Account Placeholder 2] ([Count Placeholder])
+  - [Observation Placeholder]
+
+Right upper table:
+Priority | Count of Cases
+1 - Critical | [Count Placeholder]
+2 - High | [Count Placeholder]
+3 - Medium | [Count Placeholder]
+4 - Low | [Count Placeholder]
+Grand Total | [Count Placeholder]
+
+Right lower table:
+Account | Count of Cases
+Category A | 0
+Category B | 0
+Category C | 0
+Category D | 0
+Category E | 0
+Category F | 0
+Category G | 0
+Category H | 0
+Category I | 0
+Category J | 0
+
+Slide 6:
+Use Text + Table Hybrid Layout.
+Title:
+Cases Opened By Location and Configuration Item – Top 10
+Left commentary:
+Location:
+[Location Placeholder 1] ([Count Placeholder])
+  - [Observation Placeholder]
+[Location Placeholder 2] ([Count Placeholder])
+  - [Observation Placeholder]
+
+Configuration Item / Device:
+[Configuration Item Placeholder 1] ([Count Placeholder])
+  - [Observation Placeholder]
+[Configuration Item Placeholder 2] ([Count Placeholder])
+  - [Observation Placeholder]
+
+Right upper table:
+Location | Count of Cases
+
+Right lower table:
+Configuration Item | Count of Cases
+
+Slide 7:
+Use Text + Table Hybrid Layout.
+Title:
+Cases Opened By Circuit – Top 10
+Left commentary:
+[Circuit Placeholder 1]
+  - [Observation Placeholder]
+[Circuit Placeholder 2]
+  - [Observation Placeholder]
+[Circuit Placeholder 3]
+  - [Observation Placeholder]
+
+Right table:
+Circuit | Count of Cases
+
+Slide 8:
+Use Chart Layout.
+Title:
+TAO SD Cases by Month
+Chart placeholder text:
+[Monthly Case Volume Stacked Column Chart Placeholder]
+
+Slide 9:
+Use Pivot-Style Chart Layout.
+Chart title:
+Repeat Account - Prior Stewardships (Top 10)
+Pivot buttons:
+[Count of Account]
+[Account]
+
+Slide 10:
+Use Pivot-Style Chart Layout.
+Chart title:
+Repeat Devices - Prior Stewardships (Top 10)
+Pivot buttons:
+[Count of Device]
+[Device]
+
+Slide 11:
+Use Pivot-Style Chart Layout.
+Chart title:
+Repeat Circuits - Prior Stewardships (Top 10)
+Pivot buttons:
+[Count of Circuit]
+[Circuit]
+
+Slide 12:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Availability Metrics - LogicMonitor
+
+Slide 13:
+Use Text + Table Hybrid Layout.
+Title:
+Availability – TAO Platform
+Left summary:
+- MCP / MOS = [Percentage Placeholder]
+  - Compute = [Percentage Placeholder]
+  - Switch = [Percentage Placeholder]
+  - [Count Placeholder] Devices showed “no data” [Status Placeholder]
+
+Bottom/full table:
+Resource | Available | Unavailable | Notes
+[Resource Placeholder 1] | [Metric Placeholder] | [Duration Placeholder] | [Notes Placeholder]
+[Resource Placeholder 2] | [Metric Placeholder] | [Duration Placeholder] | [Notes Placeholder]
+[Resource Placeholder 3] | [Metric Placeholder] | [Duration Placeholder] | [Notes Placeholder]
+
+Slide 14:
+Use Chart Layout.
+Title:
+Availability
+Chart placeholder:
+[Monthly Availability Chart Placeholder]
+
+Slide 15:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Alert Metrics – LogicMonitor
+
+Slide 16:
+Use Text + Table Hybrid Layout.
+Title:
+Node Alerts (Critical) – Top 10
+Left commentary:
+- [Count Placeholder] Critical Alerts
+- Top 5 Devices:
+  - [Configuration Item Placeholder]
+    - [Observation Placeholder]
+  - [Configuration Item Placeholder]
+    - [Observation Placeholder]
+
+Right table:
+Configuration Item | Count of Alerts
+
+Slide 17:
+Use Pivot-Style Chart Layout.
+Chart title:
+Critical Alerts by Device - Prior Stewardships (Top 10)
+Pivot buttons:
+[Count of Device]
+[Device]
+
+Slide 18:
+Use Large Table Layout but modify as follows:
+Title:
+Down Nodes - Platform
+Left mini block:
+- [Count Placeholder] Down Node Alerts
+- Repeat Downs:
+
+Mini table:
+Configuration Item | Count of Down
+
+Right/large table:
+Severity | Resource | Datasource | Began | End
+
+Slide 19:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] BGP Metrics – LogicMonitor
+
+Slide 20:
+Use Text + Table Hybrid Layout.
+Title:
+BGP Alerts – Top 10 - Device
+Left commentary:
+- [Count Placeholder] BGP alerts ([Count Placeholder] related placeholder)
+  - [Configuration Item Placeholder]
+    - Problem case [Problem Case Placeholder]
+  - [Configuration Item Placeholder]
+    - Problem case [Problem Case Placeholder]
+
+Right table:
+Configuration Item | Count of Flaps
+
+Slide 21:
+Use Pivot-Style Chart Layout.
+Chart title:
+Repeat Devices - Prior Stewardship (BGP Flaps)
+Pivot buttons:
+[Count of Device]
+[Device]
+
+Slide 22:
+Use Text + Table Hybrid Layout.
+Title:
+BGP Alerts – Top 10 - IP
+Left commentary:
+- [Count Placeholder] BGP alerts
+  - [BGP Peer Placeholder]
+    - Problem case [Problem Case Placeholder]
+  - [BGP Peer Placeholder]
+    - Problem case [Problem Case Placeholder]
+
+Right table:
+IP / Configuration Item | Count of Flap
+
+Slide 23:
+Use Pivot-Style Chart Layout.
+Chart title:
+Repeat IPs - Prior Stewardships (BGP IPs)
+Pivot buttons:
+[Count of IP]
+[IP]
+
+Slide 24:
+Use Dashboard/Table Screenshot Layout.
+Title:
+Discards Cumulus – Top 10
+Upper table title:
+Cumulus Top 10 InDiscards
+Lower table title:
+Cumulus Top 10 OutDiscards
+
+Slide 25:
+Use Dashboard/Table Screenshot Layout.
+Title:
+Discards Vyatta – Top 10
+Upper table title:
+Vyatta Top 10 InDiscards
+Lower table title:
+Vyatta Top 10 OutDiscards
+
+Slide 26:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Utilization – United States
+
+Slides 27–38:
+Use Utilization Site Layout.
+Create 12 slides with these title patterns:
+27. Utilization – Links – [US Site Placeholder 1] ([Link Count Placeholder])
+28. Utilization – Links – [US Site Placeholder 2] ([Link Count Placeholder])
+29. Utilization – Links – [US Site Placeholder 3] ([Link Count Placeholder])
+30. Utilization – Links – [US Site Placeholder 4] ([Link Count Placeholder])
+31. Utilization – Links – [US Site Placeholder 5] ([Link Count Placeholder])
+32. Utilization – Links – [US Site Placeholder 6] ([Link Count Placeholder])
+33. Utilization – Links – [US Site Placeholder 7] ([Link Count Placeholder])
+34. Utilization – Links – [US Site Placeholder 8] ([Link Count Placeholder])
+35. Utilization – Links – [US Site Placeholder 9] ([Link Count Placeholder])
+36. Utilization – Links – [US Site Placeholder 10] ([Link Count Placeholder])
+37. Utilization – Links – [US Site Placeholder 11] ([Link Count Placeholder])
+38. Utilization – Links – [US Site Placeholder 12] ([Link Count Placeholder])
+
+Slide 39:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Utilization – Canada
+
+Slides 40–41:
+Use Utilization Site Layout.
+40. Utilization – Links – [Canada Site Placeholder 1] ([Link Count Placeholder])
+41. Utilization – Links – [Canada Site Placeholder 2] ([Link Count Placeholder])
+
+Slide 42:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Utilization – South America
+
+Slides 43–45:
+Use Utilization Site Layout.
+43. Utilization – Links – [South America Site Placeholder 1] ([Link Count Placeholder])
+44. Utilization – Links – [South America Site Placeholder 2] ([Link Count Placeholder])
+45. Utilization – Links – [South America Site Placeholder 3] ([Link Count Placeholder])
+
+Slide 46:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Utilization - India
+
+Slides 47–48:
+Use Utilization Site Layout.
+47. Utilization – Links – [India Site Placeholder 1] ([Link Count Placeholder])
+48. Utilization – Links – [India Site Placeholder 2] ([Link Count Placeholder])
+
+Slide 49:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Utilization - APAC
+
+Slides 50–60:
+Use Utilization Site Layout.
+50. Utilization – Links – [APAC Site Placeholder 1] ([Link Count Placeholder])
+51. Utilization – Links – [APAC Site Placeholder 2] ([Link Count Placeholder])
+52. Utilization – Links – [APAC Site Placeholder 3] ([Link Count Placeholder])
+53. Utilization – Links – [APAC Site Placeholder 4] ([Link Count Placeholder])
+54. Utilization – Links – [APAC Site Placeholder 5] ([Link Count Placeholder])
+55. Utilization – Links – [APAC Site Placeholder 6] ([Link Count Placeholder])
+56. Utilization – Links – [APAC Site Placeholder 7] ([Link Count Placeholder])
+57. Utilization – Links – [APAC Site Placeholder 8] ([Link Count Placeholder])
+58. Utilization – Links – [APAC Site Placeholder 9] ([Link Count Placeholder])
+59. Utilization – Links – [APAC Site Placeholder 10] ([Link Count Placeholder])
+60. Utilization – Links – [APAC Site Placeholder 11] ([Link Count Placeholder])
+
+Slide 61:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Utilization – Australia / NZ
+
+Slides 62–67:
+Use Utilization Site Layout.
+62. Utilization – Links – [Australia NZ Site Placeholder 1] ([Link Count Placeholder])
+63. Utilization – Links – [Australia NZ Site Placeholder 2] ([Link Count Placeholder])
+64. Utilization – Links – [Australia NZ Site Placeholder 3] ([Link Count Placeholder])
+65. Utilization – Links – [Australia NZ Site Placeholder 4] ([Link Count Placeholder])
+66. Utilization – Links – [Australia NZ Site Placeholder 5] ([Link Count Placeholder])
+67. Utilization – Links – [Australia NZ Site Placeholder 6] ([Link Count Placeholder])
+
+Slide 68:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month Year] Utilization - EMEA
+
+Slides 69–71:
+Use Utilization Site Layout.
+69. Utilization – Links – [EMEA Site Placeholder 1] ([Link Count Placeholder])
+70. Utilization – Links – [EMEA Site Placeholder 2] ([Link Count Placeholder])
+71. Utilization – Links – [EMEA Site Placeholder 3] ([Link Count Placeholder])
+
+Slide 72:
+Use Section Divider Layout.
+Title:
+[Reporting Data Month] - VOICE
+
+Slide 73:
+Use Text + Table Hybrid Layout.
+Title:
+Proxy Alerts – Up / Down (Top 10)
+Left commentary:
+- [Count Placeholder] Proxy Alerts
+  - Top 10 SBCs
+    - [Count Placeholder] were on lab devices (removed from list)
+
+Table:
+Configuration Item | Count of Flaps
+
+Slide 74:
+Use Large Table Layout.
+Title:
+Proxy Alerts – Up / Down (Top 10)
+Large table:
+Proxy | Count of Flaps
+
+Bottom commentary:
+- [Proxy Placeholder]: [Count Placeholder] flaps
+  - [Action Placeholder]
+- [Proxy Placeholder]: [Count Placeholder] flaps
+  - [Status Placeholder]
+
+Slide 75:
+Use Large Table Layout.
+Title:
+USA – MOS DATA
+Table:
+Element | Region | Tenant | MOS Ratio | MOS Good | MOS Fair | MOS Bad | Max MOS | Avg MOS | Min MOS | Number of MOS Calls
+
+Slide 76:
+Use Large Table Layout.
+Title:
+[International Regions Placeholder] – MOS DATA
+Table:
+Element | Region | Tenant | MOS Ratio | MOS Good | MOS Fair | MOS Bad | Max MOS | Avg MOS | Min MOS | Number of MOS Calls
+
+Slide 77:
+Use Dense Notes Layout.
+Title:
+To Do’s – Bring into report
+Body:
+- [Reporting Requirement Placeholder]
+- [Availability Reporting Placeholder]
+- [Utilization Reporting Placeholder]
+- [Voice Reporting Placeholder]
+- [MOS Reporting Placeholder]
+- [Discard Reporting Placeholder]
+- [Compliance Reporting Placeholder]
+- [Status Placeholder]
+
+Slide 78:
+Use Section Divider Layout.
+Title:
+Feedback
+
+QUALITY-CONTROL REQUIREMENTS
+
+Before returning the file, validate the following:
+
+1. The deck contains exactly 78 slides.
+2. Slide size is exactly 10 x 7.5 inches.
+3. The deck is 4:3 ratio.
+4. Slides 4, 12, 15, 19, 26, 39, 42, 46, 49, 61, 68, 72, and 78 are cyan/blue divider slides.
+5. Standard reporting slides are white.
+6. Standard reporting slide titles are blue.
+7. No real operational data appears anywhere.
+8. No real customer/account/device/site/IP/circuit/ticket/URL values appear.
+9. Slides 27–38 contain 12 utilization site placeholders.
+10. Slides 40–41 contain 2 utilization site placeholders.
+11. Slides 43–45 contain 3 utilization site placeholders.
+12. Slides 47–48 contain 2 utilization site placeholders.
+13. Slides 50–60 contain 11 utilization site placeholders.
+14. Slides 62–67 contain 6 utilization site placeholders.
+15. Slides 69–71 contain 3 utilization site placeholders.
+16. Slides 24–25 are dashboard/table screenshot-style slides.
+17. Slides 73–74 are proxy alert slides.
+18. Slides 75–76 are MOS data slides.
+19. Slide 77 is the To Do’s slide.
+20. Slide 78 is Feedback.
+21. Tables use light blue headers and compact formatting.
+22. Pivot-style chart slides include pivot field button placeholders.
+23. Utilization site slides include centered embedded Excel/CSV placeholders.
+24. Footer slide numbers appear on standard content slides.
+25. Logo placeholders appear in footer locations where appropriate.
+
+FINAL OUTPUT
+
+Return the completed blank PowerPoint template.
+
+The file should be named:
+monthly_stewardship_blank_template.pptx
+
+Also provide a brief generation summary including:
+- slide count
+- whether placeholders only were used
+- whether the 4:3 size was applied
+- any assumptions or limitations
