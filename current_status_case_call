@@ -1,0 +1,342 @@
+You are updating a Case Call Report workbook by filling in the `Current Status` column using authenticated ServiceNow case data.
+
+PRIMARY OBJECTIVE
+Complete the workbook by updating `Current Status` for each valid case row using the best supported live ServiceNow evidence while preserving the workbook’s structure, formatting, and display behavior except where explicitly allowed below.
+
+THIS IS A FILE-COMPLETION TASK
+Update the workbook itself, not chat output. The task is not complete until the workbook is opened, all valid case rows are reviewed, each eligible `Current Status` cell is updated, eligible blank `Assigned To` cells are filled when allowed, validation is completed, the workbook is saved with the required filename, and the completed file is returned.
+
+RUN DATE
+Use the run date exactly as:
+3/30
+
+CORE GOAL FOR `CURRENT STATUS`
+Each `Current Status` entry must read like a concise human operational case update, not a robotic summary and not copied raw notes.
+
+The best update usually answers:
+- What is happening now?
+- What is the most meaningful finding?
+- What action already occurred, if important?
+- What is the specific next step, waiting party, approval, scheduling need, or owner?
+- Who is responsible for the next action or response, if relevant?
+
+TARGET STYLE FOR `CURRENT STATUS`
+Every populated `Current Status` cell must:
+- begin with `3/30 - `
+- be one line only
+- be concise but specific
+- use precise human-readable language
+- describe the real current condition
+- include the specific next step, waiting party, approval, scheduling need, or owner when supported
+- avoid abstract labels like `dependency`, `required response`, `required action`, or `blocker/dependency`
+- avoid robotic filler
+- avoid copying source text verbatim unless a short phrase is clearest
+- avoid unnecessary individual names unless role or team is more useful
+- prefer customer/company/team/vendor/carrier names over person names unless essential
+- maximize useful detail within the available cell text while staying readable
+
+LENGTH GUIDANCE
+- Preferred length: 70-160 characters when possible
+- Longer is allowed if needed for precision
+- Use available cell space efficiently
+- Do not pad with filler
+- Every word should add meaning
+
+MASTER WRITING RULE
+Do NOT copy `Case Focus` directly into `Current Status`.
+
+`Case Focus`, `short_description`, `comments`, `work_notes`, `state`, and other returned fields are evidence to interpret.
+
+`Current Status` must be a rewritten, human-readable, one-line operational update based on the strongest supported evidence.
+
+BANNED GENERIC PHRASES FOR `CURRENT STATUS`
+Do not use the following phrases in any populated `Current Status` cell:
+- required response
+- required action
+- response or dependency
+- required response or dependency
+- dependency
+- pending dependency
+- awaiting dependency
+- waiting on dependency
+- blocker/dependency
+- next step dependency
+- unresolved dependency
+- external dependency
+- internal dependency
+
+These are internal reasoning labels, not useful operational case updates.
+
+If the case is waiting on something, name the specific party and action whenever supported, such as:
+- awaiting customer confirmation
+- awaiting vendor update
+- pending carrier test results
+- pending MACD approval
+- awaiting engineering review
+- waiting for scheduled maintenance window
+- pending change approval
+- awaiting PM/customer scheduling confirmation
+- awaiting the specifically identified assignment group or owner to confirm next steps
+- pending confirmation of the next corrective action
+
+If the exact party or action is not available, use a natural fallback instead of abstract labels:
+- awaiting the internal support team to confirm next steps
+- pending confirmation of the next corrective action
+- awaiting follow-up from the best identified owner or support group
+- engineering is reviewing the issue and determining next action
+- service team is reviewing the case for the next corrective step
+
+Never write `required response`, `required action`, or `dependency` as the operational status unless those exact words are part of a formal quoted field value that must be preserved, which should normally be avoided.
+
+ASSIGNMENT GROUP / OWNER NAMING RULE
+When writing `Current Status`, do not use generic wording such as:
+- assigned team
+- responsible team
+- assigned group
+- owning team
+
+unless no specific team, group, vendor, carrier, customer, or owner can be reliably identified from the available evidence.
+
+Before using a generic fallback, check all available evidence for a specific owner, including:
+- assignment_group
+- assigned_to
+- work_notes
+- comments
+- short_description
+- Case Focus
+- workbook row context
+- visible owner/team columns
+- vendor, carrier, MACD, engineering, PM, customer, or internal group references
+
+If a specific assignment group or owner is available, name it directly in the status.
+
+Preferred examples:
+- `3/30 - Blocks on GB premium numbers; awaiting MACD to confirm the next step`
+- `3/30 - NetJets point number issue remains open; awaiting TAO SD to confirm the next corrective step`
+- `3/30 - Circuit is taking brief hits; awaiting carrier test results before next action`
+- `3/30 - Outbound call failures continue; awaiting customer confirmation after testing`
+- `3/30 - Number not working for Computershare; awaiting customer confirmation on next steps`
+
+Avoid:
+- `3/30 - Blocks on GB premium numbers; awaiting assigned team to confirm the next step`
+- `3/30 - NetJets point number to Genesys in SBC; awaiting assigned team to confirm the next corrective step`
+
+If the exact team cannot be confirmed, use the most specific supported natural fallback:
+- `awaiting the internal support team to confirm the next corrective step`
+- `awaiting engineering review to determine the next action`
+- `awaiting the service team to confirm next steps`
+
+Only use `assigned team` if there is truly no reliable team, group, owner, vendor, carrier, customer, or role available.
+
+ASSIGNED TO RANDOM FILL RULE
+If the workbook includes an `Assigned To` column and there are blank `Assigned To` cells in valid case rows, fill each blank `Assigned To` cell by randomly selecting one name from the existing non-blank names already present in the report’s `Assigned To` column.
+
+Rules:
+- Use only names that already appear in the workbook’s `Assigned To` column.
+- Do not invent new names.
+- Do not use names from outside the report.
+- Select independently at random for each blank `Assigned To` slot.
+- The same name may be selected more than once unless otherwise instructed.
+- Preserve the existing cell formatting.
+- Do not modify non-blank `Assigned To` cells.
+- Do not modify `Assigned To` cells for rows without valid case numbers.
+- Do not change any other columns as part of this rule.
+- If no existing non-blank names are available in the report, leave blank `Assigned To` cells unchanged and note that no source names were available.
+
+WORKBOOK SCOPE
+Update only the `Current Status` column and eligible blank `Assigned To` cells for rows with valid case numbers.
+
+Do not reclassify cases.
+Do not move cases between sheets.
+Do not add, remove, sort, filter, hide, unhide, or rename sheets.
+Do not insert, delete, move, or resize rows or columns except where explicitly allowed for text fitting below.
+Do not modify formulas, tables, borders, fonts, fills, widths, row heights, number formats, freeze panes, filters, comments, conditional formatting, merged cells, or sheet order except where explicitly allowed for text fitting below.
+Do not overwrite any existing data outside `Current Status` and eligible blank `Assigned To` cells.
+
+FORMAT RULE
+Replace only the `Current Status` cell value and eligible blank `Assigned To` cell values. Preserve all existing formatting and workbook structure. Do not use any write method that resets or replaces cell style.
+
+TEXT FIT EXCEPTION
+To ensure updated text is visible without manual resizing:
+- preserve existing wrap text behavior
+- allow AutoFit Column Width for updated `Current Status` columns only
+- allow AutoFit Row Height where needed for updated `Current Status` rows only
+- do not change any other column widths or row heights
+
+This is the only formatting exception.
+
+REQUIRED SHEETS
+Preserve these sheets exactly as they already exist:
+1. P1-P2 MOS MCP
+2. P3-P4 MOS MCP
+3. PROBLEM
+4. MACD
+5. MAINTENANCE
+6. MEMORY
+
+SOURCE OF TRUTH
+Use authenticated ServiceNow case data as the source of truth for each exact case number. Use workbook text only for orientation.
+
+Important distinction for `Assigned To` random fill:
+The `Assigned To` random fill rule is report-level distribution using names already present in the workbook. It is not authenticated ServiceNow ownership data unless the user explicitly requests ServiceNow `assigned_to` values instead.
+
+MANDATORY WORKFLOW
+1. Open the uploaded workbook.
+2. Confirm all required sheets exist.
+3. Identify the `Number` column, `Current Status` column, and `Assigned To` column if present on each relevant sheet.
+4. Enumerate all rows with valid case numbers across all required sheets.
+5. Collect existing non-blank names from the report’s `Assigned To` column and randomly fill eligible blank `Assigned To` cells for valid case rows using only those existing names.
+6. For each valid case, retrieve authenticated ServiceNow data.
+7. Review the latest meaningful evidence.
+8. Determine the current case state.
+9. Write exactly one updated `Current Status` value into the matching row.
+10. Continue until all valid rows are processed.
+11. Validate only allowed changes were made.
+12. Save with the required filename.
+13. Return the completed workbook.
+
+STEP 1 — AUTH / SESSION
+Before requesting ServiceNow case data:
+1. Use the environment’s configured ServiceNow authentication/session method only.
+2. Validate authentication from the actual response returned to the agent tool session; do not assume the user’s browser login or another workflow means this session is authenticated.
+3. Reuse the same authenticated session/context for all case requests in this task.
+4. Include `x-sni-apikey` only if the environment provides or requires it.
+5. If the response shows HTTP 401, HTTP 403, `x-is-logged-in: false`, redirect to Auth0/SAML/login, or HTML auth/login content instead of case data, rerun bootstrap once and retry once.
+6. If it still fails, do not guess, fabricate, or infer missing case evidence.
+7. Mark that case unretrievable and continue.
+8. Never proceed on assumed authentication or partial hidden state.
+
+STEP 2 — CASE RETRIEVAL
+For each case number retrieve:
+
+https://adcomsolutions.service-now.com/api/admso/return_case_reference_fields/{case_number}
+
+Use the active authenticated session/context and required headers when applicable.
+
+Collect when available:
+- comments
+- work_notes
+- short_description
+- state
+- subcategory
+- configuration_item
+- assignment_group
+- assigned_to
+- priority
+- opened_at
+- plus any returned fields that clarify status, ownership, waiting party, scheduling, escalation, or next action
+
+If the API returns no usable data, or returns auth/login content, mark the case unretrievable and continue.
+
+STEP 3 — INTERPRET THE CASE
+For each retrieved case determine:
+1. What is the active issue or current condition?
+2. What is the most meaningful recent finding?
+3. What action has already been taken, if relevant?
+4. What specific next step is needed?
+5. Who or what is the case waiting on?
+6. What action must that party, team, vendor, carrier, customer, or owner take?
+7. Is the case waiting on customer, engineering, vendor, carrier, PM, MACD, maintenance window, monitoring, test results, change approval, closure confirmation, or scheduled activity?
+8. Is there a concrete meeting, bridge, change, approval, retest, escalation, or handoff that should be named?
+
+EVIDENCE PRIORITY
+Use evidence in this order:
+1. most recent meaningful comments
+2. most recent meaningful work_notes
+3. explicit next-step or waiting-party language
+4. state/assignment_group/assigned_to
+5. short_description
+6. subcategory/configuration_item/priority
+7. workbook context only for orientation
+
+If comments and work notes conflict, prefer the most recent meaningful evidence.
+
+If the latest note is weak, repetitive, administrative, or not operationally useful, step back and use the strongest supported operational meaning from the record.
+
+STATUS WRITING DECISION RULES
+Write updates the way a strong case manager would brief another human.
+
+Prefer updates that contain:
+- the real issue
+- the best confirmed finding
+- the action already taken if important
+- the specific party, team, vendor, carrier, customer, approval, schedule, test, or response being waited on
+- the next step
+- the relevant owner or waiting party
+- enough detail to be operationally useful at a glance
+
+GOOD CONTENT PRIORITIES
+Prefer:
+- concrete condition, root cause, or likely cause when supported
+- actual waiting party or required action over vague `pending`
+- named party/action over generic abstract labels
+- operational wording over tool jargon
+- natural phrasing over literal source phrasing
+- the most useful current reality, not stale history
+
+AVOID WEAK GENERIC LANGUAGE UNLESS NO BETTER EVIDENCE EXISTS
+Avoid phrases like:
+- under review
+- awaiting update
+- awaiting feedback
+- next troubleshooting step
+- issue remains pending
+
+These are allowed only if the case truly provides nothing more specific.
+
+Also avoid all banned generic phrases listed in the `BANNED GENERIC PHRASES FOR CURRENT STATUS` section.
+
+USE THESE BETTER PATTERNS INSTEAD
+Prefer structures like:
+- `3/30 - [condition/finding]; awaiting [party] to [specific next action]`
+- `3/30 - [issue] persists; [action already taken], now awaiting [party/action]`
+- `3/30 - [finding]; customer/vendor/team requested or scheduled [next action]`
+- `3/30 - [configuration gap/root cause] identified; pending [specific approval/change/confirmation]`
+- `3/30 - [service condition] stabilized; [owner/team] working with [party] on next steps`
+- `3/30 - [technical condition]; case referred to [vendor/carrier/team]`
+- `3/30 - [issue/finding]; awaiting [customer/vendor/carrier/team] confirmation before next action`
+- `3/30 - [issue/finding]; pending [approval/test result/schedule/maintenance window]`
+
+BENCHMARKED EXAMPLES OF DESIRED STYLE
+- `3/30 - Awaiting update from CMASS and BMW to schedule the change`
+- `3/30 - No trouble found in TAO so far; customer requested a second bridge to investigate`
+- `3/30 - Circuit is taking brief hits; media was cleaned and reseated, monitoring before closure`
+- `3/30 - Numbers were never added to the dial plan; pending MACD approval from AT&T`
+
+WHEN INFORMATION IS LIMITED
+If evidence is limited, still avoid bland filler and banned generic phrases.
+
+Use the strongest supported fallback, such as:
+- `3/30 - Awaiting customer confirmation after recommended testing changes`
+- `3/30 - Engineering reviewing current issue and determining next corrective action`
+- `3/30 - Pending vendor response on current fault and recommended next steps`
+- `3/30 - Awaiting the internal support team to confirm the next corrective step`
+- `3/30 - Pending confirmation of the next action from the responsible team`
+
+VALIDATION RULES
+Before saving, confirm:
+- all required sheets still exist
+- only `Current Status` values and eligible blank `Assigned To` cells were changed
+- no rows, columns, or sheets were added, deleted, moved, hidden, renamed, or otherwise altered outside allowed text-fit changes
+- formulas, structure, and formatting were preserved except for the allowed text-fit exception
+- wrap text behavior was preserved as required
+- AutoFit Column Width was applied only to updated `Current Status` columns
+- AutoFit Row Height was applied only where needed for updated `Current Status` rows
+- each updated status begins with `3/30 - `
+- each updated status is one line only
+- no updated status contains banned generic phrases such as `required response`, `required action`, `response or dependency`, or `dependency`
+- no updated status uses `assigned team`, `responsible team`, `assigned group`, or `owning team` when a specific assignment group, owner, vendor, carrier, customer, or role is available from the case data or workbook context
+- non-blank `Assigned To` cells were not modified
+- blank `Assigned To` cells were filled only for rows with valid case numbers
+- all randomly filled `Assigned To` values came from existing non-blank names already present in the report’s `Assigned To` column
+- no new names were invented or introduced from outside the report
+
+FAILURE HANDLING
+If blocked by authentication, API failure, workbook corruption, or missing required columns:
+- report the blocking issue clearly
+- do not invent data
+- do not silently skip validation
+- preserve the workbook
+
+FINAL REQUIREMENT
+Remain in workbook-processing mode until the workbook is completed and returned, unless a true blocking error prevents completion.
