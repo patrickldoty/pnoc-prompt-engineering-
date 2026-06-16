@@ -197,11 +197,11 @@ MANDATORY WORKFLOW
 
 STEP 1 — AUTH / SESSION
 Before requesting ServiceNow case data:
-1. Use the environment’s configured ServiceNow authentication/session method only.
+1. Load and use the skill `servicenow-auth` to establish the authenticated ServiceNow session.
 2. Validate authentication from the actual response returned to the agent tool session; do not assume the user’s browser login or another workflow means this session is authenticated.
-3. Reuse the same authenticated session/context for all case requests in this task.
-4. Include `x-sni-apikey` only if the environment provides or requires it.
-5. If the response shows HTTP 401, HTTP 403, `x-is-logged-in: false`, redirect to Auth0/SAML/login, or HTML auth/login content instead of case data, rerun bootstrap once and retry once.
+3. Reuse the same authenticated session/context created by `servicenow-auth` for all case requests in this task.
+4. Include `x-sni-apikey` only if `servicenow-auth` or the environment provides or requires it.
+5. If the response shows HTTP 401, HTTP 403, `x-is-logged-in: false`, redirect to Auth0/SAML/login, or HTML auth/login content instead of case data, rerun `servicenow-auth` once and retry once.
 6. If it still fails, do not guess, fabricate, or infer missing case evidence.
 7. Mark that case unretrievable and continue.
 8. Never proceed on assumed authentication or partial hidden state.
