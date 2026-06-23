@@ -7,8 +7,25 @@ THIS IS A FILE-COMPLETION TASK
 Update the workbook itself, not chat output. The task is not complete until the workbook is opened, all valid case rows are reviewed, each eligible `Current Status` cell is updated, eligible blank `Assigned To` cells are filled when allowed, validation is completed, the workbook is saved with the required filename, and the completed file is returned.
 
 RUN DATE
-Use the run date exactly as:
-3/30
+Use today’s date at runtime in `M/D` format for the `Current Status` prefix.
+
+Define this value as:
+[RUN_DATE]
+
+Example:
+- June 23 = `6/23`
+
+EXISTING CURRENT STATUS DATE-ONLY UPDATE RULE
+If a `Current Status` cell already contains non-blank text, do not rewrite, regenerate, summarize, improve, or refresh the status body.
+
+For any pre-populated `Current Status` cell:
+- replace only the leading date prefix with `[RUN_DATE] - `
+- if the existing value begins with another date prefix such as `3/30 -`, replace only that prefix
+- if the existing value is non-blank and does not begin with a date prefix, prepend `[RUN_DATE] - `
+- preserve the remainder of the text exactly as it already exists
+- do not query ServiceNow for rows whose `Current Status` is already populated unless the user explicitly requests a fresh status rewrite
+
+If a `Current Status` cell is blank, follow the normal workflow and generate the status from authenticated ServiceNow evidence.
 
 CORE GOAL FOR `CURRENT STATUS`
 Each `Current Status` entry must read like a concise human operational case update, not a robotic summary and not copied raw notes.
@@ -22,7 +39,7 @@ The best update usually answers:
 
 TARGET STYLE FOR `CURRENT STATUS`
 Every populated `Current Status` cell must:
-- begin with `3/30 - `
+- begin with `[RUN_DATE] - `
 - be one line only
 - be concise but specific
 - use precise human-readable language
@@ -111,15 +128,15 @@ Before using a generic fallback, check all available evidence for a specific own
 If a specific assignment group or owner is available, name it directly in the status.
 
 Preferred examples:
-- `3/30 - Blocks on GB premium numbers; awaiting MACD to confirm the next step`
-- `3/30 - NetJets point number issue remains open; awaiting TAO SD to confirm the next corrective step`
-- `3/30 - Circuit is taking brief hits; awaiting carrier test results before next action`
-- `3/30 - Outbound call failures continue; awaiting customer confirmation after testing`
-- `3/30 - Number not working for Computershare; awaiting customer confirmation on next steps`
+- `[RUN_DATE] - Blocks on GB premium numbers; awaiting MACD to confirm the next step`
+- `[RUN_DATE] - NetJets point number issue remains open; awaiting TAO SD to confirm the next corrective step`
+- `[RUN_DATE] - Circuit is taking brief hits; awaiting carrier test results before next action`
+- `[RUN_DATE] - Outbound call failures continue; awaiting customer confirmation after testing`
+- `[RUN_DATE] - Number not working for Computershare; awaiting customer confirmation on next steps`
 
 Avoid:
-- `3/30 - Blocks on GB premium numbers; awaiting assigned team to confirm the next step`
-- `3/30 - NetJets point number to Genesys in SBC; awaiting assigned team to confirm the next corrective step`
+- `[RUN_DATE] - Blocks on GB premium numbers; awaiting assigned team to confirm the next step`
+- `[RUN_DATE] - NetJets point number to Genesys in SBC; awaiting assigned team to confirm the next corrective step`
 
 If the exact team cannot be confirmed, use the most specific supported natural fallback:
 - `awaiting the internal support team to confirm the next corrective step`
@@ -288,30 +305,30 @@ Also avoid all banned generic phrases listed in the `BANNED GENERIC PHRASES FOR 
 
 USE THESE BETTER PATTERNS INSTEAD
 Prefer structures like:
-- `3/30 - [condition/finding]; awaiting [party] to [specific next action]`
-- `3/30 - [issue] persists; [action already taken], now awaiting [party/action]`
-- `3/30 - [finding]; customer/vendor/team requested or scheduled [next action]`
-- `3/30 - [configuration gap/root cause] identified; pending [specific approval/change/confirmation]`
-- `3/30 - [service condition] stabilized; [owner/team] working with [party] on next steps`
-- `3/30 - [technical condition]; case referred to [vendor/carrier/team]`
-- `3/30 - [issue/finding]; awaiting [customer/vendor/carrier/team] confirmation before next action`
-- `3/30 - [issue/finding]; pending [approval/test result/schedule/maintenance window]`
+- `[RUN_DATE] - [condition/finding]; awaiting [party] to [specific next action]`
+- `[RUN_DATE] - [issue] persists; [action already taken], now awaiting [party/action]`
+- `[RUN_DATE] - [finding]; customer/vendor/team requested or scheduled [next action]`
+- `[RUN_DATE] - [configuration gap/root cause] identified; pending [specific approval/change/confirmation]`
+- `[RUN_DATE] - [service condition] stabilized; [owner/team] working with [party] on next steps`
+- `[RUN_DATE] - [technical condition]; case referred to [vendor/carrier/team]`
+- `[RUN_DATE] - [issue/finding]; awaiting [customer/vendor/carrier/team] confirmation before next action`
+- `[RUN_DATE] - [issue/finding]; pending [approval/test result/schedule/maintenance window]`
 
 BENCHMARKED EXAMPLES OF DESIRED STYLE
-- `3/30 - Awaiting update from CMASS and BMW to schedule the change`
-- `3/30 - No trouble found in TAO so far; customer requested a second bridge to investigate`
-- `3/30 - Circuit is taking brief hits; media was cleaned and reseated, monitoring before closure`
-- `3/30 - Numbers were never added to the dial plan; pending MACD approval from AT&T`
+- `[RUN_DATE] - Awaiting update from CMASS and BMW to schedule the change`
+- `[RUN_DATE] - No trouble found in TAO so far; customer requested a second bridge to investigate`
+- `[RUN_DATE] - Circuit is taking brief hits; media was cleaned and reseated, monitoring before closure`
+- `[RUN_DATE] - Numbers were never added to the dial plan; pending MACD approval from AT&T`
 
 WHEN INFORMATION IS LIMITED
 If evidence is limited, still avoid bland filler and banned generic phrases.
 
 Use the strongest supported fallback, such as:
-- `3/30 - Awaiting customer confirmation after recommended testing changes`
-- `3/30 - Engineering reviewing current issue and determining next corrective action`
-- `3/30 - Pending vendor response on current fault and recommended next steps`
-- `3/30 - Awaiting the internal support team to confirm the next corrective step`
-- `3/30 - Pending confirmation of the next action from the responsible team`
+- `[RUN_DATE] - Awaiting customer confirmation after recommended testing changes`
+- `[RUN_DATE] - Engineering reviewing current issue and determining next corrective action`
+- `[RUN_DATE] - Pending vendor response on current fault and recommended next steps`
+- `[RUN_DATE] - Awaiting the internal support team to confirm the next corrective step`
+- `[RUN_DATE] - Pending confirmation of the next action from the responsible team`
 
 VALIDATION RULES
 Before saving, confirm:
@@ -322,7 +339,7 @@ Before saving, confirm:
 - wrap text behavior was preserved as required
 - AutoFit Column Width was applied only to updated `Current Status` columns
 - AutoFit Row Height was applied only where needed for updated `Current Status` rows
-- each updated status begins with `3/30 - `
+- each updated status begins with `[RUN_DATE] - `
 - each updated status is one line only
 - no updated status contains banned generic phrases such as `required response`, `required action`, `response or dependency`, or `dependency`
 - no updated status uses `assigned team`, `responsible team`, `assigned group`, or `owning team` when a specific assignment group, owner, vendor, carrier, customer, or role is available from the case data or workbook context
@@ -330,6 +347,7 @@ Before saving, confirm:
 - blank `Assigned To` cells were filled only for rows with valid case numbers
 - all randomly filled `Assigned To` values came from existing non-blank names already present in the report’s `Assigned To` column
 - no new names were invented or introduced from outside the report
+- if a `Current Status` cell was already populated before processing, confirm that only the leading date prefix was changed and the remainder of the text stayed exactly the same
 
 FAILURE HANDLING
 If blocked by authentication, API failure, workbook corruption, or missing required columns:
