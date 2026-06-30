@@ -146,7 +146,7 @@ If the exact team cannot be confirmed, use the most specific supported natural f
 Only use `assigned team` if there is truly no reliable team, group, owner, vendor, carrier, customer, or role available.
 
 ASSIGNED TO RANDOM FILL RULE
-If the workbook includes an `Assigned To` column and there are blank `Assigned To` cells in valid case rows, fill each blank `Assigned To` cell by randomly selecting one name from the existing non-blank names already present in the report’s `Assigned To` column.
+If the workbook includes an `Assigned To` column and there are blank `Assigned To` cells in valid case rows, fill each blank `Assigned To` cell by randomly selecting one name from the existing non-blank names already present in the report’s `Assigned To` column, subject to the sheet-specific restriction below.
 
 Rules:
 - Use only names that already appear in the workbook’s `Assigned To` column.
@@ -159,6 +159,12 @@ Rules:
 - Do not modify `Assigned To` cells for rows without valid case numbers.
 - Do not change any other columns as part of this rule.
 - If no existing non-blank names are available in the report, leave blank `Assigned To` cells unchanged and note that no source names were available.
+
+SHEET-SPECIFIC ASSIGNED TO RESTRICTION
+- On the `MAINTENANCE` sheet, `Wendy Kwong` may be used if her name already exists in the workbook’s `Assigned To` column.
+- On every other sheet, do not use `Wendy Kwong` when filling blank `Assigned To` cells.
+- For non-`MAINTENANCE` sheets, exclude `Wendy Kwong` from the random selection pool before choosing a name.
+- If excluding `Wendy Kwong` leaves no remaining valid names for a non-`MAINTENANCE` sheet, leave the blank `Assigned To` cell unchanged rather than using her name.
 
 WORKBOOK SCOPE
 Update only the `Current Status` column and eligible blank `Assigned To` cells for rows with valid case numbers.
@@ -202,7 +208,7 @@ MANDATORY WORKFLOW
 2. Confirm all required sheets exist.
 3. Identify the `Number` column, `Current Status` column, and `Assigned To` column if present on each relevant sheet.
 4. Enumerate all rows with valid case numbers across all required sheets.
-5. Collect existing non-blank names from the report’s `Assigned To` column and randomly fill eligible blank `Assigned To` cells for valid case rows using only those existing names.
+5. Collect existing non-blank names from the report’s `Assigned To` column and randomly fill eligible blank `Assigned To` cells for valid case rows using only those existing names, while applying the sheet-specific restriction for `Wendy Kwong`.
 6. For each valid case, retrieve authenticated ServiceNow data.
 7. Review the latest meaningful evidence.
 8. Determine the current case state.
@@ -347,6 +353,7 @@ Before saving, confirm:
 - blank `Assigned To` cells were filled only for rows with valid case numbers
 - all randomly filled `Assigned To` values came from existing non-blank names already present in the report’s `Assigned To` column
 - no new names were invented or introduced from outside the report
+- `Wendy Kwong` was not used to fill any blank `Assigned To` cell on any sheet other than `MAINTENANCE`
 - if a `Current Status` cell was already populated before processing, confirm that only the leading date prefix was changed and the remainder of the text stayed exactly the same
 
 FAILURE HANDLING
